@@ -7,8 +7,10 @@
   "author": "George Clarke <george_clarke98@live.co.uk>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
+    "start": "craco start",
+     "build": "craco build",
+     "test": "craco test",
+     "eject": "react-scripts eject"
   },
   "keywords": [
     "sanity"
