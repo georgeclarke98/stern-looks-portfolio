@@ -2,7 +2,12 @@ import React from "react";
 
 const Home = () => {
     return (
-        <h1>HOME</h1>
+        <main>
+            <img />
+            <section>
+                <h1>Greetings. From Stern Looks</h1>
+            </section>
+        </main>
     )
 }
 
