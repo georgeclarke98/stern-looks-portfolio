@@ -9,6 +9,17 @@
   font-weight: 400;
 }
 
+.title {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+}
+
+.titleHome {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  -webkit-text-stroke: 2px black;
+}
+
 .prose img {
   margin-left: auto;
   margin-right: auto;
@@ -16,5 +27,5 @@
 }
 
 .home-name {
-  font-size: 150px;
+  font-size: 100px;
 }
