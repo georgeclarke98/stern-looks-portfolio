@@ -5,7 +5,9 @@
   "dependencies": {
     "@babel/core": "^7.14.0",
     "@craco/craco": "^6.1.2",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^2.8.0",
+    "@sanity/image-url": "^0.140.22",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",

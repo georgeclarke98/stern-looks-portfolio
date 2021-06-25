@@ -23,18 +23,18 @@ const NavBar = () => {
             About
           </NavLink>
           <NavLink
-            to="/posts"
+            to="/portfolio"
             activeClassName="text-blue-300 bg-gray-800"
             className="inflex-flex items-center py-3 px-3 my-4 rounded text-white hover:text-blue-500 text-xl font-bold cursive tracking-widest"
           >
-            Blog
+            Portfolio
           </NavLink>
           <NavLink
-            to="/projects"
+            to="/shop"
             activeClassName="text-blue-300 bg-gray-800"
             className="inflex-flex items-center py-3 px-3 my-4 rounded text-white hover:text-blue-500 text-xl font-bold cursive tracking-widest"
           >
-            Projects
+            Merchandise
           </NavLink>
         </nav>
         <div className="inline-flex py-3 px-3 my-4">
