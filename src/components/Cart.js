@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState } from "react";
+import { commerce } from "../lib/commerce";
 import { Container, Typography, Button, Grid } from '@material-ui/core';
-
-import useStyles from './styles';
-import CartItem from './CartItem/CartItem';
+import useStyles from './Cart/styles';
+import CartItem from './Cart/CartItem/CartItem';
 import { Link } from 'react-router-dom';
 
-const Cart = ({ cart, updateCartQty, removeFromCart, emptyCart }) => {
+const Cart = () => {
+    const [cart, setCart] = useState({});
     const classes = useStyles();
+    
+      const updateCartQty = async (productId, quantity) => {
+        const { cart } = await commerce.cart.update(productId, { quantity });
+        setCart(cart);
+      };
+    
+      const removeFromCart = async (productId) => {
+        const { cart } = await commerce.cart.remove(productId);
+        setCart(cart);
+      };
+    
+      const emptyCart = async () => {
+        const { cart } = await commerce.cart.empty();
+        setCart(cart);
+      };
 
     const IsCartEmpty = () => (
         <Typography variant="subtitle1">Shopping Cart is Empty,  
@@ -43,7 +59,7 @@ const Cart = ({ cart, updateCartQty, removeFromCart, emptyCart }) => {
             <Typography className={classes.title} variant='h3' gutterBottom>ShoppingCart</Typography>
             { !cart.line_items.length ? <IsCartEmpty /> : <FilledCart />}
         </Container>
-    )
-}
+    );
+};
 
 export default Cart

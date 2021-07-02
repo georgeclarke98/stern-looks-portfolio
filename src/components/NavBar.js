@@ -1,8 +1,11 @@
 import React from "react";
+import { IconButton } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import { Badge } from "@material-ui/core";
+import { ShoppingBasket } from "@material-ui/icons";
 
-const NavBar = () => {
+const NavBar = ({ totalItems }) => {
   return (
     <header className="bg-black">
       <div className="container mx-auto flex justify-between">
@@ -45,13 +48,21 @@ const NavBar = () => {
             fgColor="#fff"
             style={{ height: 35, width: 35 }}
           />
-          <SocialIcon
-            url="https://www.instagram.com/stern_looks/"
-            className="mr-4"
-            target="_blank"
-            fgColor="#fff"
+          <IconButton
+            component={NavLink}
+            to="/cart"
+            aria-label="Show Cart Items"
             style={{ height: 35, width: 35 }}
-          />
+          >
+            <Badge badgeContent={totalItems}>
+              <ShoppingBasket
+                to="/cart"
+                color="secondary"
+                class="material-icons-round"
+                style={{ height: 35, width: 35 }}
+              />
+            </Badge>
+          </IconButton>
         </div>
       </div>
     </header>
